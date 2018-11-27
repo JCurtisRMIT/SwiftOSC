@@ -116,7 +116,7 @@ public struct OSCAddressPattern {
         }
         //must start with "/"
         if address.first != "/" {
-            return false
+            self.string = "/" + address
         }
         //no more than two "/" in a row
         if address.range(of: "/{3,}", options: .regularExpression) != nil {
